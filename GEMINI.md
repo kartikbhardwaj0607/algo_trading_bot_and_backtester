@@ -6,4 +6,5 @@ Use JSDoc comments for every service function. All monetary values must be handl
 Database updates involving balance and positions MUST be wrapped in Mongoose transactions.
 Use winston logger (src/utils/logger.js) — never use console.log directly.
 All incoming request data must be validated with express-validator before reaching the controller.
+
 Never expose hashed passwords or internal ObjectIds in API responses.
