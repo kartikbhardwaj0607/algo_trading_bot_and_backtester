@@ -15,6 +15,7 @@ const getISTTimeParts = () => {
   const formatter = new Intl.DateTimeFormat('en-IN', {
     timeZone: 'Asia/Kolkata',
     weekday: 'short',
+    
     hour: 'numeric',
     minute: 'numeric',
     hour12: false,
@@ -45,6 +46,8 @@ const isMarketOpen = () => {
 
   // Convert current IST time to total minutes for easy comparison
   const totalMinutes = hours * 60 + minutes;
+  
+  
   const marketOpen = 9 * 60 + 15;   // 9:15 AM = 555 minutes
   const marketClose = 15 * 60 + 30; // 3:30 PM = 930 minutes
 
