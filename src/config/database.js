@@ -8,6 +8,7 @@ const logger = require('../utils/logger');
 const connectDB = async () => {
   const MONGO_URI = process.env.MONGODB_URI;
 
+  
   if (!MONGO_URI) {
     logger.error('MONGODB_URI is not defined in environment variables.');
     process.exit(1);
