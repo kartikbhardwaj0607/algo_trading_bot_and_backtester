@@ -33,6 +33,8 @@ const register = async (req, res) => {
     }
 
     // Create user — hashedPassword is hashed by the pre-save hook
+    
+    
     const user = await User.create({ username, email, hashedPassword: password });
 
     // Initialise virtual account with ₹1,00,000
