@@ -94,6 +94,8 @@ const closePosition = async (position, currentPrice, trigger) => {
 
     // 2. Return capital + P&L to the user's account
     const positionCost = position.entryPrice * position.quantity;
+    
+    
     const returnAmount = Math.round((positionCost + pl) * 100) / 100;
 
     const updatedAccount = await Account.findOneAndUpdate(
