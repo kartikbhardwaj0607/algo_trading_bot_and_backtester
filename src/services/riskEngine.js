@@ -23,6 +23,8 @@ const processingPositions = new Set();
  * @param {number} currentPrice - Current market price
  * @returns {number} P&L rounded to 2 decimal places
  */
+
+
 const calculatePL = (position, currentPrice) => {
   let pl;
   if (position.tradeType === 'BUY') {
