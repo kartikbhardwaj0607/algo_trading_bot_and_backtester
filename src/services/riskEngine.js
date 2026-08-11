@@ -117,6 +117,8 @@ const closePosition = async (position, currentPrice, trigger) => {
     // 3. Auto-journal entry (non-fatal)
     await createJournalEntry(updatedPosition);
 
+    
+    
     return { position: updatedPosition, pl };
   } catch (error) {
     if (session) {
