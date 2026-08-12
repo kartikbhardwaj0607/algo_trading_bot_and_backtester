@@ -68,6 +68,8 @@ const getMockPrice = (symbol) => {
   };
 
   const base = symbolBases[symbol.toUpperCase()] || 1000;
+  
+  
   const fluctuation = (Math.random() * 10 - 5); // ±₹5
   const mockPrice = Math.round((base + fluctuation) * 100) / 100;
 
