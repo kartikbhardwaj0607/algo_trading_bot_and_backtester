@@ -9,6 +9,8 @@ const logger = require('../utils/logger');
  * @returns {'WIN' | 'LOSS' | 'NEAR_MISS'}
  */
 const classifyOutcome = (position) => {
+  
+  
   if (position.pl > 0) {
     // Check for NEAR_MISS on the downside? Actually NEAR_MISS applies to a loss
     // that was very close to the target (within 2% of target profit potential)
