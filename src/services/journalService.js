@@ -36,6 +36,7 @@ const classifyOutcome = (position) => {
     // Near miss: loss but we're within 2% of having hit the target
     // In practice this means the SL was very tight and the trade almost worked
     const nearMissMaxLoss = (position.stopLoss - position.entryPrice) * position.quantity;
+    
     if (Math.abs(position.pl) < Math.abs(nearMissMaxLoss) * 0.1) {
       return 'NEAR_MISS';
     }
