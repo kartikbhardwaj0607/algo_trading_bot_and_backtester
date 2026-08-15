@@ -42,6 +42,7 @@ const getLivePrice = async (symbol) => {
     priceCache.set(upperSymbol, { price, fetchedAt: Date.now() });
 
     logger.debug(`Live price fetched for ${upperSymbol}: ₹${price}`);
+    
     return price;
   } catch (error) {
     logger.warn(`Yahoo Finance failed for ${upperSymbol}: ${error.message}. Falling back to mock price.`);
