@@ -5,9 +5,13 @@ const router = express.Router();
 const {
   placeTrade,
   getPortfolio,
+  
   getPosition,
+  
   cancelPosition,
+  
   getJournal,
+  
   updateReflection,
 } = require('../controllers/tradeController');
 const { protect } = require('../middlewares/authMiddleware');
