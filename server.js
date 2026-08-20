@@ -44,6 +44,7 @@ app.use(
 // ── Health Check ───────────────────────────────────────────────────────────────
 app.get('/health', (req, res) => {
   res.status(200).json({
+    
     success: true,
     status: 'OK',
     service: 'TradeVed Paper Trading API',
