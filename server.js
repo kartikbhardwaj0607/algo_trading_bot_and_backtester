@@ -32,6 +32,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api', generalLimiter);
 
 // ── API Documentation ──────────────────────────────────────────────────────────
+
 app.use(
   '/api/docs',
   swaggerUi.serve,
