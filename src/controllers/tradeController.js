@@ -183,6 +183,7 @@ const cancelPosition = async (req, res) => {
     const refund = Math.round(position.entryPrice * position.quantity * 100) / 100;
 
     await Promise.all([
+      
       Position.findByIdAndUpdate(position._id, { status: 'CANCELLED', closedAt: new Date() }),
       Account.findOneAndUpdate(
         { userId },
